@@ -3,12 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import { reducer } from './reducers'
 
+// https://pokeapi.co/api/v2/
+
+const store = createStore(reducer, applyMiddleware(thunk));
+
+const rootElement = document.getElementById('root');
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>,
+  // </React.StrictMode>,
+  rootElement
 );
 
 // If you want to start measuring performance in your app, pass a function
