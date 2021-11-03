@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getJoke } from './../actions';
 
-const Joke = ({ joke, isFetching, fetchStart, error, dispatch }) => {
+const Joke = ({ joke, isFetching, error, dispatch }) => {
 
     useEffect(() => {
         dispatch(getJoke())
@@ -37,7 +37,6 @@ const mapStateToProps = state => {
         joke: state.joke,
         isFetching: state.isFetching,
         error: state.error,
-        fetchStart: state.fetchStart
     }
 }
 

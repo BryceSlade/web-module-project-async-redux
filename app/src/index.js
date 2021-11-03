@@ -8,8 +8,6 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { reducer } from './reducers'
 
-// https://pokeapi.co/api/v2/
-
 const store = createStore(reducer, applyMiddleware(thunk));
 
 const rootElement = document.getElementById('root');

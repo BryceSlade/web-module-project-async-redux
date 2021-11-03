@@ -9,7 +9,6 @@ export const getJoke = () => {
         dispatch(fetchStart());
         axios.get('https://v2.jokeapi.dev/joke/Any')
             .then(response => {
-                console.log(response)
                 dispatch(fetchSuccess(response.data))
             })
             .catch(error => {

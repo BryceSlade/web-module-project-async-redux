@@ -1,10 +1,7 @@
 import { FETCH_START, FETCH_SUCCESS, FETCH_ERROR } from './../actions'
 
 const initialState = {
-    joke: {
-        setup: 'What are cats so good at video games?',
-        delivery: 'They have nine lives'
-    },
+    joke: {},
     isFetching: false,
     error: '',
 }
