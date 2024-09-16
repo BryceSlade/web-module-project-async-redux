@@ -20,7 +20,7 @@ In this project you'll choose an api to consume. You will build an application f
 
 ## Instructions
 
-### Task 1: Project Set Up
+### Task 1: Project Set Up // initial commit
 
 - [ ] Create a forked copy of this project.
 - [ ] Add your team lead as collaborator on Github.
